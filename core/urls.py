@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from .views import UserViewSet, ProjectViewSet, CategoryViewSet, PriorityViewSet, TaskViewSet
 
 router = DefaultRouter()

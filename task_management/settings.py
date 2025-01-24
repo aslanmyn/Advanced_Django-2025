@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+AUTH_USER_MODEL = 'core.User'
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -126,15 +126,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
 
-    'DEFAULT_FILTER_BACKENDS': [
+    'DEFAULT_AUTHENTICATION_CLASSES': [
 
-        'django_filters.rest_framework.DjangoFilterBackend',
-
-        'rest_framework.filters.SearchFilter',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
 
     ],
-
-    'PAGE_SIZE': 10,
 
 }
 
