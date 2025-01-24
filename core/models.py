@@ -14,12 +14,12 @@ class User(AbstractUser):
 
     groups = models.ManyToManyField(
         'auth.Group',
-        related_name='core_user_groups',  # Уникальное имя
+        related_name='core_user_groups',
         blank=True,
     )
     user_permissions = models.ManyToManyField(
         'auth.Permission',
-        related_name='core_user_permissions',  # Уникальное имя
+        related_name='core_user_permissions',
         blank=True,
     )
 
